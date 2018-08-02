@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import QuakesList from './QuakesList';
+import MapContainer from './MapContainer';
+
 
 class App extends Component {
   constructor(){
@@ -31,7 +33,7 @@ componentDidMount() {
     return (
       <div className="app">
         <div className="mapContainer">
-          ...put Map Component here...
+          <MapContainer quakes={this.state.quakes} />
         </div>
         <div className="quakeContainer">
           <h1>Earthquakes from the past week: </h1>
